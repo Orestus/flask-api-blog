@@ -1,0 +1,12 @@
+# recreated with "pip install -r requirements.txt"
+venv/
+
+# Python bytecode cache: regenerated automatically
+__pycache__/
+*.pyc
+
+# secrets and local environment settings
+.env
+
+# local SQLite database
+# instance/
