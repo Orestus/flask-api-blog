@@ -76,12 +76,13 @@ docker run -d -p 5000:5000 --name flask-blog flask-blog-api
 ### Run on an AWS EC2 instance (Ubuntu)
 
 1. In the instance's security group, add an inbound rule: TCP, port 5000.
-2. Install Docker: sudo apt update && sudo apt install -y docker.io
-3. (Optional) To avoid using 'sudo' for every docker command: sudo usermod -aG docker $USER && newgrp docker
+2. Install Docker: `sudo apt update && sudo apt install -y docker.io`
+3. (Optional) To avoid using 'sudo' for every docker command: `sudo usermod -aG docker $USER && newgrp docker`
 4. Pull and run the image:
+```bash
    sudo docker pull orestus50/flask_api_blog
    sudo docker run -d -p 5000:5000 --name flask-blog orestus50/flask_api_blog
-
+```
 5. Open `http://<EC2-public-IP>:5000/v1/posts` in a browser. Use the public IP instead of `127.0.0.1` in all the example URLs.
 
 ## API endpoints
