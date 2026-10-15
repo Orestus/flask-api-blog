@@ -64,15 +64,15 @@ The repository includes a SQLite database (`instance/blog.db`) with some demo po
 ## Run with Docker
 
 ### Pull the image from Docker Hub
-
+```bash
 docker pull orestus50/flask_api_blog
 docker run -d -p 5000:5000 --name flask-blog orestus50/flask_api_blog
-
+```
 ### Or build it yourself
-
+```bash
 docker build -t flask-blog-api .
 docker run -d -p 5000:5000 --name flask-blog flask-blog-api
-
+```
 ### Run on an AWS EC2 instance (Ubuntu)
 
 1. In the instance's security group, add an inbound rule: TCP, port 5000.
